@@ -12,19 +12,26 @@
     <br>
     <p id="topic">Twitty</p>
     <br>
-    <Content v-for="x in list" :key="x" id="cont"></Content>
+    <Contents v-for="x in list" :key="x" id="cont"></Contents>
+    <!--<button v-on:click="a">555</button>-->
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar'
-import Content from '@/components/Content'
+import Contents from '@/components/Content'
 export default {
   name: 'app',
   components: {
     Navbar,
-    Content
+    Contents
+  },
+  methods: {
+    // a () {
+    //   this.$router.push('hello')
+    //   this.$router.push({path: 'hello', query: { earth: 'asdhj' }})
+    // }
   },
   data () {
     return {
